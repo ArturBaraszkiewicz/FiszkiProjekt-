@@ -1,0 +1,50 @@
+﻿@model Fiszki.Models.Card
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Card</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Difficult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Difficult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
