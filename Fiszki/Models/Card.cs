@@ -19,6 +19,7 @@ namespace Fiszki.Models
         [Range(1, 10)]
         public int Difficult { get; set; }
         public Category Category { get; set; }
+        public int PackageID { get; set; }
 
         public virtual Package Package { get; set; }
     }

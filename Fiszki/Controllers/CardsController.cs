@@ -13,14 +13,27 @@ namespace Fiszki.Controllers
 {
     public class CardsController : Controller
     {
-        private FiszkiContext db = new FiszkiContext();
+        private FiszkiContextik db = new FiszkiContextik();
 
         // GET: Cards
         public ActionResult Index()
         {
+
             return View(db.Cards.ToList());
         }
 
+        // GET: Cards/Package/5
+        public ActionResult Package(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            List<Card> cards = db.Cards.ToList().FindAll(delegate(Card obj) { return obj.PackageID == id; });
+
+            return View(cards);
+        }
+       
         // GET: Cards/Details/5
         public ActionResult Details(int? id)
         {
@@ -47,7 +60,7 @@ namespace Fiszki.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,PlWord,EngWord,Difficult,Category")] Card card)
+        public ActionResult Create([Bind(Include = "ID,PlWord,EngWord,Difficult,Category,PackageID")] Card card)
         {
             if (ModelState.IsValid)
             {

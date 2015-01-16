@@ -8,12 +8,13 @@ using System.Web;
 using System.Web.Mvc;
 using Fiszki.DAL;
 using Fiszki.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Fiszki.Controllers
 {
     public class PackagesController : Controller
     {
-        private FiszkiContext db = new FiszkiContext();
+        private FiszkiContextik db = new FiszkiContextik();
 
         // GET: Packages
         public ActionResult Index()
@@ -37,6 +38,7 @@ namespace Fiszki.Controllers
         }
 
         // GET: Packages/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -46,11 +48,14 @@ namespace Fiszki.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,AuthorID,Name,Text,Icon")] Package package)
         {
             if (ModelState.IsValid)
             {
+                // zalogowac sie trzeba do usera 
+                package.AuthorID = User.Identity.GetUserId();
                 db.Packages.Add(package);
                 db.SaveChanges();
                 return RedirectToAction("Index");
