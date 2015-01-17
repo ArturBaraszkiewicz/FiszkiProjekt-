@@ -5,7 +5,7 @@ namespace Fiszki.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Fiszki.DAL.FiszkiContextik>
+    internal sealed class Configuration : DbMigrationsConfiguration<Fiszki.DAL.FiszkiContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace Fiszki.Migrations
             ContextKey = "Fiszki.DAL.FiszkiContext";
         }
 
-        protected override void Seed(Fiszki.DAL.FiszkiContextik context)
+        protected override void Seed(Fiszki.DAL.FiszkiContext context)
         {
             //  This method will be called after migrating to the latest version.
 

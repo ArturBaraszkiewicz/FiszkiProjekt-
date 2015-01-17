@@ -8,115 +8,136 @@ using System.Web;
 using System.Web.Mvc;
 using Fiszki.DAL;
 using Fiszki.Models;
-using Microsoft.AspNet.Identity;
 
 namespace Fiszki.Controllers
 {
-    public class PackagesController : Controller
+    public class LearnController : Controller
     {
         private FiszkiContext db = new FiszkiContext();
 
-        // GET: Packages
+        // GET: Learn
         public ActionResult Index()
         {
-            return View(db.Packages.ToList());
+            
+            return View(NewLearnStatus());
         }
 
-        // GET: Packages/Details/5
+        public List<LearnStatus> NewLearnStatus()
+        {
+            var LearnStatuses = new List<LearnStatus>();
+            /* TODO zapytanie linq wołające wszystkie karty z danej paczki 
+            List<Card> cards = db.Cards.ToList();
+
+            foreach (Package package in db.Packages.ToList())
+            {
+                package.Cards.ToList();
+                
+            }*/
+
+            var karty = db.Cards.ToList().FindAll(obj => obj.Package.AuthorID == "ddbde702-2a30-4aae-96b9-3aba7afa2cbd");
+            LearnStatus x = new LearnStatus();
+            foreach (Card karta in karty)
+            {
+                LearnStatuses.Add(new LearnStatus { Card = karta });
+            }
+            return LearnStatuses;
+        }
+
+        // GET: Learn/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Package package = db.Packages.Find(id);
-            if (package == null)
+            LearnStatus learnStatus = db.LearnStatuss.Find(id);
+            if (learnStatus == null)
             {
                 return HttpNotFound();
             }
-            return View(package);
+            return View(learnStatus);
         }
 
-        // GET: Packages/Create
-        [Authorize]
+        // GET: Learn/Create
         public ActionResult Create()
         {
+            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord");
             return View();
         }
 
-        // POST: Packages/Create
+        // POST: LearnStatus/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,AuthorID,Name,Text,Icon")] Package package)
+        public ActionResult Create([Bind(Include = "CardID,UserID,Progress,Views,NextOccurrence")] LearnStatus learnStatus)
         {
             if (ModelState.IsValid)
             {
-                // zalogowac sie trzeba do usera 
-                package.AuthorID = User.Identity.GetUserId();
-                db.Packages.Add(package);
+                db.LearnStatuss.Add(learnStatus);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(package);
+            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord", learnStatus.CardID);
+            return View(learnStatus);
         }
 
-        // GET: Packages/Edit/5
+        // GET: Learn/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Package package = db.Packages.Find(id);
-            if (package == null)
+            LearnStatus learnStatus = db.LearnStatuss.Find(id);
+            if (learnStatus == null)
             {
                 return HttpNotFound();
             }
-            return View(package);
+            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord", learnStatus.CardID);
+            return View(learnStatus);
         }
 
-        // POST: Packages/Edit/5
+        // POST: LearnStatus/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,AuthorID,Name,Text,Icon")] Package package)
+        public ActionResult Edit([Bind(Include = "CardID,UserID,Progress,Views,NextOccurrence")] LearnStatus learnStatus)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(package).State = EntityState.Modified;
+                db.Entry(learnStatus).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(package);
+            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord", learnStatus.CardID);
+            return View(learnStatus);
         }
 
-        // GET: Packages/Delete/5
+        // GET: Learn/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Package package = db.Packages.Find(id);
-            if (package == null)
+            LearnStatus learnStatus = db.LearnStatuss.Find(id);
+            if (learnStatus == null)
             {
                 return HttpNotFound();
             }
-            return View(package);
+            return View(learnStatus);
         }
 
-        // POST: Packages/Delete/5
+        // POST: LearnStatus/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Package package = db.Packages.Find(id);
-            db.Packages.Remove(package);
+            LearnStatus learnStatus = db.LearnStatuss.Find(id);
+            db.LearnStatuss.Remove(learnStatus);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

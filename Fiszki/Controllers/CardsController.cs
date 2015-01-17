@@ -13,7 +13,7 @@ namespace Fiszki.Controllers
 {
     public class CardsController : Controller
     {
-        private FiszkiContextik db = new FiszkiContextik();
+        private FiszkiContext db = new FiszkiContext();
 
         // GET: Cards
         public ActionResult Index()

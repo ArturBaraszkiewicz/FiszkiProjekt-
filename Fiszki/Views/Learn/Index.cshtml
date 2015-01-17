@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Fiszki.Models.LearnStatus>
+
+@{
+    ViewBag.Title = "Nauka";
+}
+
+<h2>Tryb nauki</h2>
+<p>Kliknij w w słowo aby je oznaczyć.</p>
+
+<div id="Container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="mix col-md-4" data-myorder="1" style="height: 160px;">
+                <h2>
+                    @Html.DisplayFor(modelItem => item.Card.PlWord)
+                </h2>
+                <a class="show">Tłumaczenie</a>
+                <div class="answer">
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Card.EngWord)
+                    </h3>
+                    @Html.ActionLink("Umiem", "Answer", new { id = item.Card.ID, answer = true }) | 
+                    @Html.ActionLink("Nie Umiem", "Answer", new { id = item.Card.ID, answer = false})
+                </div>
+            </div>
+        }
+    </div>
+</div>

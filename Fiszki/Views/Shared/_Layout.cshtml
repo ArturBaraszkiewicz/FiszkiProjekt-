@@ -48,7 +48,13 @@
             // Instantiate MixItUp:
 
             $('#Container').mixItUp();
+            $('.answer').hide();
 
+            $('.show').on("click", function () {
+                $(this).next().show();
+                $(this).hide();
+                $(this).parent().css("background-color", "#d6e9c6");
+            });
         });
     </script>
 </body>
