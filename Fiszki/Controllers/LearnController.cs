@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using Fiszki.DAL;
 using Fiszki.Models;
+using Microsoft.AspNet.Identity;
+using System.Web.Services;
 
 namespace Fiszki.Controllers
 {
@@ -33,8 +35,9 @@ namespace Fiszki.Controllers
                 package.Cards.ToList();
                 
             }*/
+            string userID = User.Identity.GetUserId();
 
-            var karty = db.Cards.ToList().FindAll(obj => obj.Package.AuthorID == "ddbde702-2a30-4aae-96b9-3aba7afa2cbd");
+            var karty = db.Cards.ToList().FindAll(obj => obj.Package.AuthorID == userID);
             LearnStatus x = new LearnStatus();
             foreach (Card karta in karty)
             {
@@ -42,8 +45,6 @@ namespace Fiszki.Controllers
             }
             return LearnStatuses;
         }
-
-        // GET: Learn/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -59,10 +60,11 @@ namespace Fiszki.Controllers
         }
 
         // GET: Learn/Create
-        public ActionResult Create()
+        public string Create(int? id, string answer)
         {
-            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord");
-            return View();
+            //TODO: Zapisywanie do bazy informacji o umiem/nieUmiem danej karty.
+            string x = "ID: " + id + "Answer: " + answer;
+            return x;
         }
 
         // POST: LearnStatus/Create
@@ -70,15 +72,16 @@ namespace Fiszki.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CardID,UserID,Progress,Views,NextOccurrence")] LearnStatus learnStatus)
+        public ActionResult Create([Bind(Include = "id, answer")] String s)
         {
+            LearnStatus learnStatus = new LearnStatus();
             if (ModelState.IsValid)
             {
                 db.LearnStatuss.Add(learnStatus);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            s = s + "";
             ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord", learnStatus.CardID);
             return View(learnStatus);
         }

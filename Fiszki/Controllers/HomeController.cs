@@ -15,7 +15,7 @@ namespace Fiszki.Controllers
 
         public ActionResult About()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }

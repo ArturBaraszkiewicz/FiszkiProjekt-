@@ -15,13 +15,15 @@
                 <h2>
                     @Html.DisplayFor(modelItem => item.Card.PlWord)
                 </h2>
+                
                 <a class="show">Tłumaczenie</a>
+
                 <div class="answer">
                     <h3>
                         @Html.DisplayFor(modelItem => item.Card.EngWord)
                     </h3>
-                    @Html.ActionLink("Umiem", "Answer", new { id = item.Card.ID, answer = true }) | 
-                    @Html.ActionLink("Nie Umiem", "Answer", new { id = item.Card.ID, answer = false})
+                    <button id="@item.Card.ID" class="true btn" >Umiem</button>
+                    <button id="@item.Card.ID" class="false btn" >Nie Umiem</button>
                 </div>
             </div>
         }

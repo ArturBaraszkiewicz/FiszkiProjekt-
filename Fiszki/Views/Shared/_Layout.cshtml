@@ -55,7 +55,19 @@
                 $(this).hide();
                 $(this).parent().css("background-color", "#d6e9c6");
             });
+            // Przyciski umiem/nieUmiem
+            $(".true").on("click", function () {
+                SendAnswer($(this).attr('id'), true);
+            });
+            $(".false").on("click", function () {
+                SendAnswer($(this).attr('id'), false);
+            });
         });
+        function SendAnswer(id, answer) {
+            $.ajax({
+                url: "/Learn/Create/" + id + "?answer=" + answer,
+            });
+        };
     </script>
 </body>
 </html>
