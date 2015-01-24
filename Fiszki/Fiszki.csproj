@@ -183,6 +183,10 @@
     <Compile Include="Migrations\201501151358386_InitialCreate2.Designer.cs">
       <DependentUpon>201501151358386_InitialCreate2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501240153231_learn.cs" />
+    <Compile Include="Migrations\201501240153231_learn.Designer.cs">
+      <DependentUpon>201501240153231_learn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Card.cs" />
@@ -266,11 +270,7 @@
     <Content Include="Views\Packages\Edit.cshtml" />
     <Content Include="Views\Packages\Index.cshtml" />
     <Content Include="Views\Cards\Package.cshtml" />
-    <Content Include="Views\Learn\Create.cshtml" />
-    <Content Include="Views\Learn\Delete.cshtml" />
-    <Content Include="Views\Learn\Details.cshtml" />
-    <Content Include="Views\Learn\Edit.cshtml" />
-    <Content Include="Views\Learn\Index.cshtml" />
+    <Content Include="Views\Learn\Package.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501151358386_InitialCreate2.resx">
       <DependentUpon>201501151358386_InitialCreate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501240153231_learn.resx">
+      <DependentUpon>201501240153231_learn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

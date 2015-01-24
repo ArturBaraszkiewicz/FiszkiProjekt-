@@ -17,134 +17,130 @@ namespace Fiszki.Controllers
     {
         private FiszkiContext db = new FiszkiContext();
 
-        // GET: Learn
-        public ActionResult Index()
+        // GET: Learn/Package/5
+        [Authorize]
+        public ActionResult Package(int? id)
         {
-            
-            return View(NewLearnStatus());
-        }
-
-        public List<LearnStatus> NewLearnStatus()
-        {
-            var LearnStatuses = new List<LearnStatus>();
-            /* TODO zapytanie linq wołające wszystkie karty z danej paczki 
-            List<Card> cards = db.Cards.ToList();
-
-            foreach (Package package in db.Packages.ToList())
+            if (id == null)
             {
-                package.Cards.ToList();
-                
-            }*/
+                return RedirectPermanent("/Packages/");
+            }
+            Package package = db.Packages.Find(id);
+            if (package == null)
+            {
+                return HttpNotFound();
+            }
+            int PackageID = id.GetValueOrDefault();
+
+            if (IsLearnStatusExist(PackageID))
+            {
+                return View(TodayCards(PackageID));
+            }
+            else
+            {
+                return View(GenerateCardsNew(PackageID));
+            }
+        }
+        public List<LearnStatus> TodayCards(int PackageID)
+        {
             string userID = User.Identity.GetUserId();
 
-            var karty = db.Cards.ToList().FindAll(obj => obj.Package.AuthorID == userID);
-            LearnStatus x = new LearnStatus();
-            foreach (Card karta in karty)
-            {
-                LearnStatuses.Add(new LearnStatus { Card = karta });
-            }
-            return LearnStatuses;
-        }
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            LearnStatus learnStatus = db.LearnStatuss.Find(id);
-            if (learnStatus == null)
-            {
-                return HttpNotFound();
-            }
-            return View(learnStatus);
-        }
+            //TODO porównywanie daty (nie obsługiwane w linq for entity)
+            // && (learn.NextOccurrence <= DateTime.Now.Date)
+            // learnQuery = learnQuery.Where(l => l.NextOccurrence.Date <= DateTime.Now.Date);
 
-        // GET: Learn/Create
-        public string Create(int? id, string answer)
-        {
-            //TODO: Zapisywanie do bazy informacji o umiem/nieUmiem danej karty.
-            string x = "ID: " + id + "Answer: " + answer;
-            return x;
-        }
+            var learnQuery =
+                from package in db.Packages
+                join card in db.Cards on package.ID equals card.PackageID
+                join learn in db.LearnStatuss on card.ID equals learn.CardID
+                where (learn.UserID == userID) && (package.ID == PackageID) 
+                select learn;
 
-        // POST: LearnStatus/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id, answer")] String s)
-        {
-            LearnStatus learnStatus = new LearnStatus();
-            if (ModelState.IsValid)
-            {
-                db.LearnStatuss.Add(learnStatus);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            s = s + "";
-            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord", learnStatus.CardID);
-            return View(learnStatus);
+            return learnQuery.ToList();
         }
-
-        // GET: Learn/Edit/5
-        public ActionResult Edit(int? id)
+        public bool IsLearnStatusExist(int PackageID)
         {
-            if (id == null)
+            string userId = User.Identity.GetUserId();
+
+            var learnQuery = 
+                from learn in db.LearnStatuss
+                where (learn.UserID == userId) && (learn.Card.PackageID==PackageID)
+                select learn.CardID;
+
+            if (learnQuery.Count() == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return false;
             }
-            LearnStatus learnStatus = db.LearnStatuss.Find(id);
-            if (learnStatus == null)
-            {
-                return HttpNotFound();
+            else {
+                return true;
             }
-            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord", learnStatus.CardID);
-            return View(learnStatus);
         }
-
-        // POST: LearnStatus/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CardID,UserID,Progress,Views,NextOccurrence")] LearnStatus learnStatus)
+        public List<LearnStatus> GenerateCardsNew(int PackageID)
         {
-            if (ModelState.IsValid)
-            {
-                db.Entry(learnStatus).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.CardID = new SelectList(db.Cards, "ID", "PlWord", learnStatus.CardID);
-            return View(learnStatus);
-        }
+            List<LearnStatus> learnList = new List<LearnStatus>();
 
-        // GET: Learn/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            LearnStatus learnStatus = db.LearnStatuss.Find(id);
-            if (learnStatus == null)
-            {
-                return HttpNotFound();
-            }
-            return View(learnStatus);
-        }
+            var cardsFromPackage =
+                from package in db.Packages
+                join card in db.Cards on package.ID equals card.PackageID
+                where package.ID == PackageID
+                select card;
 
-        // POST: LearnStatus/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            LearnStatus learnStatus = db.LearnStatuss.Find(id);
-            db.LearnStatuss.Remove(learnStatus);
+            foreach (Card card in cardsFromPackage)
+            {
+                learnList.Add(new LearnStatus
+                {
+                    Card = card,
+                    Views = 0,
+                    Progress = card.Difficult,
+                    UserID = User.Identity.GetUserId(),
+                    NextOccurrence = DateTime.Now.Date
+                });
+            }
+
+            db.LearnStatuss.AddRange(learnList);
             db.SaveChanges();
-            return RedirectToAction("Index");
-        }
 
+            return learnList.ToList();
+        }
+        // GET: Learn/Update
+        public void Update(int id, string answer)
+        {
+            var userID = User.Identity.GetUserId();
+
+            var learnQuery =
+                from learn in db.LearnStatuss
+                where (learn.CardID == id) && (learn.UserID == userID)
+                select learn;
+
+            if (learnQuery.Count() == 1)
+            {
+                var learnStatus = learnQuery.First();
+
+                if (answer == "true")
+                {
+                    learnStatus.Progress -= 1;
+                    learnStatus.NextOccurrence = DateTime.Now.Date.AddDays(3);
+                }
+                else if (answer == "false")
+                {
+                    learnStatus.Progress += 1;
+                    learnStatus.NextOccurrence = DateTime.Now.Date.AddDays(1);
+                }
+                else
+                {
+                    return; //error
+                }
+
+                learnStatus.Views += 1;
+
+                if (ModelState.IsValid)
+                {
+                    db.Entry(learnStatus).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+            }
+            return; //TODO zwracanie succes/fail
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

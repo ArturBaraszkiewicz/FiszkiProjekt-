@@ -1,118 +1,59 @@
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Fiszki.dll.config
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Fiszki.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Fiszki.pdb
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Antlr3.Runtime.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\EntityFramework.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\EntityFramework.SqlServer.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Newtonsoft.Json.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Owin.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Helpers.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Mvc.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Optimization.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Razor.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.WebPages.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.WebPages.Razor.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\WebGrease.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\EntityFramework.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\EntityFramework.SqlServer.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Helpers.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Mvc.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Optimization.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.Razor.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.WebPages.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\System.Web.WebPages.Razor.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Newtonsoft.Json.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\obj\Debug\Fiszki.csprojResolveAssemblyReference.cache
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate.resources
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate1.resources
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate2.resources
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\obj\Debug\Fiszki.csproj.GenerateResource.Cache
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\obj\Debug\Fiszki.dll
-C:\Users\Użytkownik\Desktop\fiszki-Test\Fiszki\obj\Debug\Fiszki.pdb
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Fiszki.dll.config
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Fiszki.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Fiszki.pdb
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Antlr3.Runtime.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\EntityFramework.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\EntityFramework.SqlServer.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Newtonsoft.Json.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\nunit.framework.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Owin.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Helpers.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Mvc.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Optimization.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Razor.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.WebPages.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.WebPages.Razor.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\WebGrease.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\EntityFramework.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\EntityFramework.SqlServer.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\nunit.framework.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Helpers.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Mvc.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Optimization.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.Razor.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.WebPages.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\System.Web.WebPages.Razor.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Newtonsoft.Json.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\obj\Debug\Fiszki.csprojResolveAssemblyReference.cache
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate.resources
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate1.resources
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate2.resources
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\obj\Debug\Fiszki.csproj.GenerateResource.Cache
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\obj\Debug\Fiszki.dll
-C:\Users\Stefan\Documents\GitHub\FiszkiProjekt-\FiszkiProjekt-\Fiszki\obj\Debug\Fiszki.pdb
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Fiszki.dll.config
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Fiszki.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Fiszki.pdb
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Antlr3.Runtime.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\EntityFramework.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\EntityFramework.SqlServer.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Newtonsoft.Json.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Owin.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Helpers.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Mvc.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Optimization.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Razor.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.WebPages.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.WebPages.Razor.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\WebGrease.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\EntityFramework.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\EntityFramework.SqlServer.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Helpers.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Mvc.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Optimization.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.Razor.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.WebPages.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\System.Web.WebPages.Razor.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Newtonsoft.Json.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.csprojResolveAssemblyReference.cache
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate.resources
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate1.resources
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.Migrations.InitialCreate2.resources
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.Migrations.learn.resources
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.csproj.GenerateResource.Cache
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.dll
+C:\Users\Użytkownik\Desktop\najnowzsy projekt\fiszki-Test\Fiszki\obj\Debug\Fiszki.pdb

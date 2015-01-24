@@ -9,8 +9,8 @@ namespace Fiszki.Models
 {
     public class LearnStatus
     {
+        public int ID { get; set; }
         public string UserID { get; set; }
-        [Key]
         [ForeignKey("Card")]
         public int CardID { get; set; }
         public int Progress { get; set; }

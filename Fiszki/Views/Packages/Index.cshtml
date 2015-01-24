@@ -19,7 +19,7 @@
                     @Html.DisplayFor(modelItem => item.Text)
                 </p>
                 <p>
-                    @Html.ActionLink("Rozpocznij naukę.", "Details", new { id = item.ID })
+                    @Html.ActionLink("Rozpocznij naukę.", "Package", "Learn", new { id = item.ID }, null)
                 </p>
             </div>
         }
