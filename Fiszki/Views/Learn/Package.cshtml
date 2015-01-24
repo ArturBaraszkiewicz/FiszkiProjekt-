@@ -5,25 +5,36 @@
 }
 
 <h2>Tryb nauki</h2>
-<p>Kliknij w w słowo aby je oznaczyć.</p>
+<div style="float: left; ">
+    <p>Wyświetl:</p>
+    <div class="filter btn" data-filter="all">wszystkie</div>
+    <div class="filter btn" data-filter=".views0">nieoceniane</div>
+</div>
+<div style="float:right; text-align; right;">
+    <p>Sortuj wg następnego wystąpienia:</p>
+    <div class="sort btn" data-sort="default">Domyślnie</div>
+    <div class="sort btn" data-sort="myorder:asc">rosnąco</div>
+    <div class="sort btn" data-sort="myorder:desc">malejąco</div>
+    <div class="sort btn" data-sort="random">Losowo</div>
+</div>
 
-<div id="Container">
+<div id="Container" style="clear:both;">
     <div class="row">
         @foreach (var item in Model)
         {
-            <div class="mix col-md-4" data-myorder="1" style="height: 160px;">
+            <div class="mix col-md-4 views@(item.Views)" data-myorder="@(item.NextOccurrence)" style="height: 200px;">
                 <h2>
                     @Html.DisplayFor(modelItem => item.Card.PlWord)
                 </h2>
-                
+
                 <a class="show">Tłumaczenie</a>
 
                 <div class="answer">
                     <h3>
                         @Html.DisplayFor(modelItem => item.Card.EngWord)
                     </h3>
-                    <button id="@item.Card.ID" class="true btn" >Umiem</button>
-                    <button id="@item.Card.ID" class="false btn" >Nie Umiem</button>
+                    <button id="@item.Card.ID" class="true btn">Umiem</button>
+                    <button id="@item.Card.ID" class="false btn">Nie Umiem</button>
                 </div>
             </div>
         }

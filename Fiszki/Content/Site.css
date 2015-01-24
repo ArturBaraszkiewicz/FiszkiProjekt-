@@ -26,3 +26,7 @@ textarea {
 #Container .mix{
 	display: none;
 }
+.sort, .filter{
+    border: 1px solid black;
+    cursor: pointer;
+}
