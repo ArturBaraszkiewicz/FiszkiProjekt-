@@ -23,18 +23,22 @@
         @foreach (var item in Model)
         {
             <div class="mix col-md-4 views@(item.Views)" data-myorder="@(item.NextOccurrence)" style="height: 200px;">
-                <h2>
-                    @Html.DisplayFor(modelItem => item.Card.PlWord)
-                </h2>
-
-                <a class="show">Tłumaczenie</a>
-
-                <div class="answer">
-                    <h3>
-                        @Html.DisplayFor(modelItem => item.Card.EngWord)
-                    </h3>
-                    <button id="@item.Card.ID" class="true btn">Umiem</button>
-                    <button id="@item.Card.ID" class="false btn">Nie Umiem</button>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">@Html.DisplayFor(modelItem => item.Card.PlWord)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <a class="show btn btn-primary">Tłumaczenie</a>
+                        <div class="answer">
+                            <h3>
+                                @Html.DisplayFor(modelItem => item.Card.EngWord)
+                            </h3>
+                            <div class="btn-group btn-group-justified">
+                                <button id="@item.Card.ID" class="true btn btn-success">Umiem</button>
+                                <button id="@item.Card.ID" class="false btn btn-danger">Nie Umiem</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         }

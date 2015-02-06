@@ -30,3 +30,13 @@ textarea {
     border: 1px solid black;
     cursor: pointer;
 }
+hr{
+    width: 100%;
+}
+.btn-group-justified>.btn, .btn-group-justified>.btn-group{
+    width: 50%;
+}
+.panel{
+    text-align:center;
+    margin-top:10px;
+}

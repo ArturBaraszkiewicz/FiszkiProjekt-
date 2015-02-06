@@ -52,6 +52,7 @@ namespace Fiszki.Controllers
         // GET: Cards/Create
         public ActionResult Create()
         {
+            ViewBag.PackageID = new SelectList(db.Packages, "ID", "Name");
             return View();
         }
 

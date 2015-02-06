@@ -55,8 +55,18 @@ namespace Fiszki.Controllers
                 join learn in db.LearnStatuss on card.ID equals learn.CardID
                 where (learn.UserID == userID) && (package.ID == PackageID) 
                 select learn;
+            //xx
+            List<LearnStatus> outQuery = new List<LearnStatus>();
 
-            return learnQuery.ToList();
+            foreach (LearnStatus learn in learnQuery)
+            {
+                if (learn.NextOccurrence <= DateTime.Now)
+                {
+                    outQuery.Add(learn);
+                }
+            }
+
+            return outQuery;
         }
         public bool IsLearnStatusExist(int PackageID)
         {
