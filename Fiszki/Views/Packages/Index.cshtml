@@ -6,21 +6,23 @@
 
 <h2>Aktualnie dostępne kursy</h2>
 <p>Wybierz kurs aby rozpocząć jego naukę.</p>
-<p>@Html.ActionLink("Stwórz nowy kurs", "Create", "Packages")</p>
+<p>@Html.ActionLink("Stwórz nowy kurs", "Create", "Packages", new { @class = "btn btn-primary btn-xs" })</p>
 <div id="Container">
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="mix col-md-4" data-myorder="1">
-                <h2>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </h2>
-                <p>
-                    @Html.DisplayFor(modelItem => item.Text)
-                </p>
-                <p>
-                    @Html.ActionLink("Rozpocznij naukę.", "Package", "Learn", new { id = item.ID }, null)
-                </p>
+                <div class="panel panel-info" style="min-height:200px;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">@Html.DisplayFor(modelItem => item.Name)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            @Html.DisplayFor(modelItem => item.Text)
+                        </p>
+                        @Html.ActionLink("Rozpocznij naukę.", "Package", "Learn", new { id = item.ID }, new { @class = "btn btn-success bottom" })
+                    </div>
+                </div>
             </div>
         }
     </div>
